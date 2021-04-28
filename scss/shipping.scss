@@ -1,0 +1,50 @@
+.main-shipping {
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__title-block {
+        width: 30%;
+        @include bg-color-f5;
+        height: 859px;
+        margin-right: 10px;
+    }
+
+    &__info-block {
+        width: 70%;
+        @include bg-color-f5;
+        height: 859px;
+    }
+
+    &__title-block {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title-block-text {
+        font-size: 50px;
+        @include avenir-font;
+        @include text-color-4a;
+        margin-top: 90px;
+    }
+
+    &__info-block-title {
+        font-size: 34px;
+        @include avenir-font;
+        color: #999997;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    &__info-block-description {
+        font-size: 16px;
+        @include proxima-font;
+        color: #858583;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 50px;
+        margin-top: 20px;
+        line-height: 25px;
+    }
+}

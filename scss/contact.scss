@@ -1,0 +1,185 @@
+.main-contact {
+    margin-top: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+        margin-top: 0;
+        flex-direction: column
+    }
+
+    &__info {
+        @include bg-color-f5;
+        height: 1317px;
+        width: 35%;
+        margin-right: 10px;
+        padding: 50px 0 0 115px;
+
+        @include mobile {
+            display: inline-block;
+            order: 2;
+            width: 100%;
+            height: 1370px;
+            padding: 40px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__info-title {
+        @include avenir-font;
+        @include text-color-4a;
+        font-size: 50px;
+        width: 100%;
+    }
+
+    &__store {
+        margin-top: 50px;
+    }
+
+    &__store-title {
+        @include proxima-font;
+        @include text-color-85;
+        font-size: 18px;
+    }
+
+    &__store-adress {
+        margin-top: 20px;
+        @include proxima-fz16-c85;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    &__image {
+        height: 1317px;
+        width: 65%;
+        background-image: url(../img/Contact/1.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include mobile {
+            order: 1;
+            width: 100%;
+            background-image: url(../img/Contact/2.webp);
+            height: 440px;
+        }
+    }
+
+    &__form {
+        margin-top: 30px;
+    }
+
+    &__form-input {
+        width: 130px;
+        height: 42px;
+        @include bg-color-f5;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid lightgray;
+        padding: 3px 3px 3px 12px;
+
+        &:hover {
+            border-bottom: 3px solid black;
+        }
+
+        &:valid {
+            border-bottom: 2px solid pink;
+        }
+
+        @include mobile {
+            width: 175px;
+        }
+    }
+
+    &__form-textarea {
+        margin-top: 10px;
+        width: 273px;
+        height: 126px;
+        padding: 12px 10px 3px 16px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        resize: none;
+        @include bg-color-f5;
+
+        &:hover {
+            border-bottom: 3px solid black;
+        }
+
+        @include mobile {
+            display: block;
+            width: 355px;
+        }
+    }
+
+    &__form-button {
+        width: 273px;
+        height: 31px;
+        cursor: pointer;
+        margin-top: 10px;
+        background-color: #4a4a4a;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        transition: 0.3s;
+        @include proxima-font;
+
+        &:hover {
+            background-color: #6e6e6e;
+        }
+
+        @include mobile {
+            width: 355px;
+        }
+    }
+
+    &__stockists {
+        margin-top: 100px;
+
+        @include mobile {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__stockists-title {
+        @include proxima-font;
+        @include text-color-85;
+        font-size: 18px;
+
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+
+    &__stockists-adress {
+        margin-top: 20px;
+        @include proxima-fz16-c85;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+}
+
+input[placeholder] {
+    @include proxima-fz16-c85;
+
+    @include mobile {
+        font-size: 20px;
+    }
+}
+
+textarea[placeholder] {
+    @include proxima-fz16-c85;
+
+    @include mobile {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,7 @@
+$screen-sm: 919px;
+
+@mixin mobile {
+    @media screen and (max-width: $screen-sm - 1px) {
+        @content;
+    }
+}
