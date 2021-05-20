@@ -19,6 +19,7 @@
 
         <div class="header-content">
 
+            <!-- ЛОГО ХЭДЕРА -->
             <div class="logo">
                 <a class="logo-link__image" href="./home.html">
                     <img class="logo-image" src="./img/Home/Logo.png" alt="">
@@ -26,11 +27,12 @@
                 <a class="logo-link__text" href="./home.html">
                     <span class="logo-text">Cielo Apparel</span>
                 </a>
-            </div> <!-- header-content -->
+            </div>
 
+            <!-- НАВИГАЦИЯ ХЭДЕРА -->
             <div class="nav-section">
 
-                <ul class="navigations">
+                <ul class="navigations burger-toggle">
                     <li class="nav-item">
                         <a class="nav-link" href="./home.html">HOME</a>
                     </li>
@@ -48,7 +50,8 @@
                     </li>
                 </ul>
 
-                <div class="login-section">
+                <!-- ОКНО ЛОГИН -->
+                <div class="login-section burger-toggle">
                     <a class="login-link__image popup-link" href="#">
                         <img src="./img/Home/Frame.svg" alt="" class="login-image">
                     </a>
@@ -57,14 +60,15 @@
                 </div>
 
                 <!-- МОДАЛКА LOGIN -->
-                <div class="login-window">
+                <div class="login-window click-close">
                     <div class="login-window__content">
+
                         <h1 class="login-window__title">Log In</h1>
                         <span class="login-window__subtitle">New to this site?
-                            <a class="login-window__link-modal signup-link" href="#">Sign Up</a>
+                            <a class="login-window__link-modal signup-link link-color" href="#">Sign Up</a>
                         </span>
 
-                        <button class="login-close"></button>
+                        <button class="popup-close-btn"></button>
 
                         <button class="login-window__face-reg">Log in with Facebook</button>
 
@@ -81,15 +85,88 @@
                     </div>
                 </div>
 
-                <!-- ОКНО РЕГИСТРАЦИИ---------------------------------- -->
-                <div class="signup-window">
+                <!-- МОДАЛКА ВВОДА ДАННЫХ ДЛЯ ЛОГИНА -->
+                <div class="login-enter click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="login-window__title">Log In</h1>
+                        <span class="login-window__subtitle">New to this site?
+                            <a class="login-window__link-modal signup-link link-color" href="#">Sign Up</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <form id="form-log" class="form-log">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+
+                            <div class="form-log__block">
+                                <label for="password" class="form-log__title">Password</label>
+                                <input id="user-password" type="password" class="form-log__input" id="password">
+                                <small class="error-text">Make sure you enter a password.</small>
+                            </div>
+                        </form>
+
+                        <div class="help-password">
+                            <a href="#" class="help-password__link"><u>Forgot password?</u></a>
+                        </div>
+
+                        <button class="login-enter__button">Log In</button>
+
+                        <div class="login-enter__text-line">
+                            <div class="login-enter__line-before"></div>
+                            <span class="login-enter__text">or log in with</span>
+                            <div class="login-enter__line-after"></div>
+                        </div>
+
+                        <div class="login-social">
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/face-logo.jpg" alt="">
+                            </div>
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/google-login.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- МОДАЛКА СБРОСА ПАРОЛЯ -->
+                <div class="new-password click-close">
+
+                    <div class="new-password__content">
+
+                        <h1 class="new-password__title">Create New Password</h1>
+                        <span class="new-password__subtitle">Please enter your email address</span>
+
+                        <form id="form-log-pass" class="form-log">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+                        </form>
+
+                        <button class="popup-close-btn"></button>
+
+                        <button class="login-enter__button">Create Password</button>
+
+                    </div>
+
+                </div>
+
+                <!-- МОДАЛКА РЕГИСТРАЦИИ ---------------------------------->
+                <div class="signup-window click-close">
                     <div class="signup-window__content">
                         <h1 class="signup-window__title">Sign Up</h1>
                         <span class="signup-window__subtitle">Already a member?
-                            <a class="signup-window__link-modal popup-link" href="">Log In</a>
+                            <a class="signup-window__link-modal popup-link link-color" href="">Log In</a>
                         </span>
 
-                        <button class="signup-close"></button>
+                        <button class="popup-close-btn"></button>
 
                         <button class="signup-window__face-reg">Sign up with Facebook</button>
 
@@ -106,16 +183,61 @@
                     </div>
                 </div>
 
-                <!-- КОРЗИНА -------------------------------------->
+                <!-- МОДАЛКА РЕГИСТРАЦИИ ВВОДА ДАННЫХ --------------------->
+                <div class="signup-enter click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="signup-window__title">Sign Up</h1>
+                        <span class="signup-window__subtitle">Already a member?
+                            <a class="signup-window__link-modal popup-link link-color" href="">Log In</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <form id="form-sign" class="form-log form-sign">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+
+                            <div class="form-log__block">
+                                <label for="password" class="form-log__title">Password</label>
+                                <input type="password" class="form-log__input">
+                                <small class="error-text">Make sure you enter a password.</small>
+                            </div>
+                        </form>
+
+                        <button class="login-enter__button">Sign Up</button>
+
+                        <div class="login-enter__text-line">
+                            <div class="login-enter__line-before"></div>
+                            <span class="login-enter__text">or sign up with</span>
+                            <div class="login-enter__line-after"></div>
+                        </div>
+
+                        <div class="login-social">
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/face-logo.jpg" alt="">
+                            </div>
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/google-login.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- КОРЗИНА -->
                 <div class="basket-section">
-                    <a class="basket-link" href="">
+                    <a class="basket-link" href="#">
                         <img class="basket-img" src="./img/Home/basket.png" alt="">
                     </a>
 
                     <div class="bascet-num">0</div>
                 </div>
 
-                <!-- МОДАЛКА КОРЗИНЫ ------------------------------>
+                <!-- МОДАЛКА КОРЗИНЫ -->
                 <div class="basket-container active-basket">
                     <div class="basket-active active-basket">
                         <div class="basket-active__header">
@@ -129,15 +251,15 @@
                 </div>
 
                 <!-- БУРГЕР -->
-                <div class="burger">
+                <div class="burger burger-toggle">
                     <span class="burger__btn"></span>
                 </div>
 
             </div> <!-- nav-section -->
 
         </div>
-
     </header>
+
 
     <main class="shop-content">
 
@@ -166,41 +288,44 @@
                 <button class="filter-mobile-close">X</button>
 
 
-                <div class="filter-bar__collection accordion-item">
+                <div class="filter-bar__collection">
 
-                    <span class="filter-bar__collection-title">Collection</span>
+                    <span class="filter-bar__collection-title click-title">Collection</span>
 
-                    <ul class="filter-bar__collection-list">
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link filter-bar__black-link" href="#"><b>All</b></a>
+                    <ul class="filter-bar__collection-list show-content">
+                        <li class="filter-bar__collection-list-item" data-id="all">
+                            <a class="filter-bar__collection-list-link" data-id="all" href="#">All</a>
                         </li>
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link" href="#">Sport Bras</a>
+                        <li class="filter-bar__collection-list-item" data-id="sport-bras-items">
+                            <a class="filter-bar__collection-list-link" href="#" data-id="sport-bras-items">Sport
+                                Bras</a>
                         </li>
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link" href="#">Leggins</a>
+                        <li class="filter-bar__collection-list-item" data-id="leggins-items">
+                            <a class="filter-bar__collection-list-link" href="#" data-id="leggins-items">Leggins</a>
                         </li>
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link" href="#">Shirts</a>
+                        <li class="filter-bar__collection-list-item" data-id="shirts-items">
+                            <a class="filter-bar__collection-list-link" href="#" data-id="shirts-items">Shirts</a>
                         </li>
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link" href="#">Shorts</a>
+                        <li class="filter-bar__collection-list-item" data-id="shorts-items">
+                            <a class="filter-bar__collection-list-link" href="#" data-id="shorts-items">Shorts</a>
                         </li>
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link" href="#">New Arrivals</a>
+                        <li class="filter-bar__collection-list-item" data-id="new-items">
+                            <a class="filter-bar__collection-list-link" href="#" data-id="new-items">New Arrivals</a>
                         </li>
-                        <li class="filter-bar__collection-list-item">
-                            <a class="filter-bar__collection-list-link" href="#">Best Sellers</a>
+                        <li class="filter-bar__collection-list-item" data-id="best-tems">
+                            <a class="filter-bar__collection-list-link" href="#" data-id="best-items">Best Sellers</a>
                         </li>
                     </ul>
 
                 </div>
 
-                <div class="section-filter accordion-item">
 
-                    <span class="section-filter__title">Price</span>
+                <!-- ЦЕНОВОЙ БЛОК------------------------------------- -->
+                <div class="section-filter">
 
-                    <div class="section-filter__body">
+                    <span class="section-filter__title click-title">Price</span>
+
+                    <div class="section-filter__body show-content">
 
                         <div class="price-filter"></div>
 
@@ -218,13 +343,14 @@
 
                 </div>
 
+                <!-- БЛОК ВЫБОРА ЦВЕТА-------------------- -->
                 <div class="colors-block accordion-item">
 
                     <div class="colors-block__header">
-                        <span class="colors-block__header-title">Color</span>
+                        <span class="colors-block__header-title click-title">Color</span>
                     </div>
 
-                    <ul class="colors-block__items">
+                    <ul class="colors-block__items show-content">
 
                         <li class="colors-block__item">
                             <label class="label-checkbox">
@@ -300,28 +426,32 @@
 
                 </div>
 
+                <!-- БЛОК ВЫБОРА РАЗМЕРА--------------------- -->
                 <div class="size-block accordion-item">
                     <div class="size-block__header">
-                        <span class="size-block__header-title">Size</span>
+                        <span class="size-block__header-title click-title">Size</span>
                     </div>
 
-                    <ul class="size-block__items">
+                    <ul class="size-block__items show-content">
                         <li class="size-block__item">
                             <label>
-                                <input type="checkbox">
-                                <span class="size-block__item-content">Large</span>
+                                <input type="checkbox" class="checkbox-size">
+                                <span class="checkbox-new"></span>
+                                <span class="size-block__item-content" data-id="large-size">Large</span>
                             </label>
                         </li>
                         <li class="size-block__item">
                             <label>
-                                <input type="checkbox">
-                                <span class="size-block__item-content">Medium</span>
+                                <input type="checkbox" class="checkbox-size">
+                                <span class="checkbox-new"></span>
+                                <span class="size-block__item-content" data-id="medium-size">Medium</span>
                             </label>
                         </li>
                         <li class="size-block__item">
                             <label>
-                                <input type="checkbox">
-                                <span class="size-block__item-content">Small</span>
+                                <input type="checkbox" class="checkbox-size">
+                                <span class="checkbox-new"></span>
+                                <span class="size-block__item-content" data-id="small-size">Small</span>
                             </label>
                         </li>
                     </ul>
@@ -340,7 +470,7 @@
 
                 <div class="container-content">
 
-                    <a class="shop-arrival__link" href="./ImAProduct.html">
+                    <a class="shop-arrival__link sport-bras-items" href="ImAProduct.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -348,7 +478,7 @@
                                     <span></span>
                                 </div>
 
-                                <button class="item-details popup-card-link">
+                                <button class="item-details popup-card-link" data-btn="info">
                                     <span class="item-details__title">
                                         Quick View
                                     </span>
@@ -357,12 +487,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">21.00$</span>
                             </div>
                         </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/1.webp" alt="">
+                                    </div>
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">21.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0001</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="ImAProduct.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </a>
 
-                    <a class="shop-arrival__link" href="./product002.html">
+                    <a class="shop-arrival__link sport-bras-items new-items" href="./product002.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -379,12 +559,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">Seamless Bra</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">18.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/2.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">Seamless Bra</span>
+
+                                        <span class="popup-card__product-price">18.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0002</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product002.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="./product003.html">
+                    <a class="shop-arrival__link sport-bras-items large-size" href="./product003.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -401,12 +631,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">15.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/3.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">15.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0003</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product003.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="./product004.html">
+                    <a class="shop-arrival__link sport-bras-items best-items small-size" href="./product004.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -423,12 +703,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">25.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/4.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">25.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0004</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product004.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="./product005.html">
+                    <a class="shop-arrival__link leggins-items new-items" href="./product005.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -445,12 +775,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">Printed Leggings</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">28.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/5.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">Printed Leggings</span>
+
+                                        <span class="popup-card__product-price">28.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0005</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product005.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="./product006.html">
+                    <a class="shop-arrival__link leggins-items large-size" href="./product006.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -467,12 +847,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">40.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/6.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">40.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0006</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product006.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="">
+                    <a class="shop-arrival__link leggins-items best-items" href="./product007.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -489,12 +919,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">21.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/7.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">21.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0007</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product007.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="">
+                    <a class="shop-arrival__link leggins-items" href="./product008.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -511,12 +991,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">32.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/8.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">32.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0008</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product008.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="">
+                    <a class="shop-arrival__link shirts-items new-items" href="./product009.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -536,9 +1066,59 @@
                                 <span class="item-info__price">19.00$</span>
                             </div>
                         </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/9.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">Running Top</span>
+
+                                        <span class="popup-card__product-price">19.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0009</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product009.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </a>
 
-                    <a class="shop-arrival__link" href="">
+                    <a class="shop-arrival__link shirts-items medium-size" href="./product010.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -555,12 +1135,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">22.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/10.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">22.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0010</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product010.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link link-hidden" href="">
+                    <a class="shop-arrival__link shirts-items link-hidden large-size" href="./product011.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -577,12 +1207,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">15.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/11.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">15.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0011</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product011.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link link-hidden" href="">
+                    <a class="shop-arrival__link shirts-items link-hidden medium-size" href="./product012.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -599,12 +1279,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">12.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/12.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">12.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0012</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product012.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link link-hidden" href="">
+                    <a class="shop-arrival__link shorts-items new-items link-hidden" href="./product013.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -621,12 +1351,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">Running Shorts</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">9.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/13.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">Running Shorts</span>
+
+                                        <span class="popup-card__product-price">9.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0013</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product013.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link link-hidden" href="">
+                    <a class="shop-arrival__link shorts-items link-hidden" href="./product014.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -643,12 +1423,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">18.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/14.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">18.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0014</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product014.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link link-hidden" href="">
+                    <a class="shop-arrival__link shorts-items best-items link-hidden" href="./product015.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -665,12 +1495,62 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">18.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- МОДАЛКА КАРТОЧКИ -->
+                        <div class="popup-card">
+                            <div class="popup-card__body">
+                                <div class="popup-card__content">
+
+                                    <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                    <div class="popup-card__image-block">
+                                        <img src="./img/shop/15.webp" alt="">
+                                    </div>
+
+                                    <div class="popup-card__product-info">
+                                        <span class="popup-card__product-title">I'm a Product</span>
+
+                                        <span class="popup-card__product-price">18.00₴</span>
+
+                                        <span class="popup-card__product-sku">SKU: 0015</span>
+
+                                        <div class="size-select">
+                                            <span class="size-select__title">Size</span>
+                                            <div class="size-select__header">
+                                                <span class="size-select__current">Select</span>
+
+                                            </div>
+
+                                            <div class="size-select__body">
+                                                <div class="size-select__item">Small</div>
+                                                <div class="size-select__item">Medium</div>
+                                                <div class="size-select__item">Large</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="quantity">
+                                            <span class="quantity-title">Quantity</span>
+
+                                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                        </div>
+
+                                        <button class="popup-card__add-button">Add To Card</button>
+
+                                        <a href="./product015.html" class="popup-card__more-info"><u>View More
+                                                Details</u></a>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </a>
 
-                    <a class="shop-arrival__link link-hidden" href="">
+                    <a class="shop-arrival__link shorts-items link-hidden" href="./product016.html">
                         <div class="shop__items">
 
                             <div class="image-wrapper">
@@ -687,10 +1567,60 @@
 
                             <div class="shop__item-info">
                                 <span class="item-info__text">I'm a Product</span>
-                                <span class="item-info__price">19.00$</span>
+                                <span class="item-info__price">12.00$</span>
                             </div>
                         </div>
                     </a>
+
+                    <!-- МОДАЛКА КАРТОЧКИ -->
+                    <div class="popup-card">
+                        <div class="popup-card__body">
+                            <div class="popup-card__content">
+
+                                <a href="#" class="popup-card__close close-popup-card">X</a>
+
+                                <div class="popup-card__image-block">
+                                    <img src="./img/shop/16.webp" alt="">
+                                </div>
+
+                                <div class="popup-card__product-info">
+                                    <span class="popup-card__product-title">I'm a Product</span>
+
+                                    <span class="popup-card__product-price">12.00₴</span>
+
+                                    <span class="popup-card__product-sku">SKU: 0016</span>
+
+                                    <div class="size-select">
+                                        <span class="size-select__title">Size</span>
+                                        <div class="size-select__header">
+                                            <span class="size-select__current">Select</span>
+
+                                        </div>
+
+                                        <div class="size-select__body">
+                                            <div class="size-select__item">Small</div>
+                                            <div class="size-select__item">Medium</div>
+                                            <div class="size-select__item">Large</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <span class="quantity-title">Quantity</span>
+
+                                        <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                                    </div>
+
+                                    <button class="popup-card__add-button">Add To Card</button>
+
+                                    <a href="./product016.html" class="popup-card__more-info"><u>View More
+                                            Details</u></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -703,56 +1633,6 @@
 
 
         </div> <!-- main-content - обертка основного контента -->
-
-        <div class="popup-card">
-            <div class="popup-card__body">
-                <div class="popup-card__content">
-
-                    <a href="#" class="popup-card__close close-popup-card">X</a>
-
-                    <div class="popup-card__image-block"></div>
-                    <div class="popup-card__product-info">
-                        <span class="popup-card__product-title">I'm a Product</span>
-
-                        <span class="popup-card__product-price">21.00₴</span>
-
-                        <span class="popup-card__product-sku">SKU: 0001</span>
-
-                        <div class="size-select">
-                            <span class="size-select__title">Size</span>
-                            <div class="size-select__header">
-                                <span class="size-select__current">Select</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    class="DropdownBase3567123648__arrowIcon">
-                                    <path fill="#000" d="M12 15L6 9.76 6.657 9l5.342 4.666L17.343 9l.657.76z"
-                                        fill-rule="evenodd"></path>
-                                </svg>
-                            </div>
-
-                            <div class="size-select__body">
-                                <div class="size-select__item">Small</div>
-                                <div class="size-select__item">Medium</div>
-                                <div class="size-select__item">Large</div>
-                            </div>
-                        </div>
-
-                        <div class="quantity">
-                            <span class="quantity-title">Quantity</span>
-
-                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
-
-                        </div>
-
-                        <button class="popup-card__add-button">Add To Card</button>
-
-                        <a href="ImAProduct.html" class="popup-card__more-info"><u>View More Details</u></a>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
 
 
     </main>
@@ -862,19 +1742,9 @@
         <div class="scroll-up__img"></div>
     </div>
 
-    <script src="./main-js/script.js"></script>
-    <script src="./main-js/login.js"></script>
-    <script src="./main-js/accordion.js"></script>
-    <script src="./main-js/size-select.js"></script>
-    <script src="./main-js/popup-card.js"></script>
+    <script type="module" src="./main-js/script.js"></script>
+    <script type="module" src="./main-js/script-shop.js"></script>
     <script src="./libs/nouislider.min.js"></script>
-    <script src="./main-js/basket.js"></script>
-    <script src="./main-js/range.js"></script>
-    <script src="./main-js/burger.js"></script>
-    <script src="./main-js/load-more.js"></script>
-    <script src="./main-js/mobile-filter.js"></script>
-    <script src="./main-js/scroll-up.js"></script>
-
 
 
 </body>

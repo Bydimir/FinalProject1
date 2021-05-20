@@ -1,51 +1,76 @@
-const loginWindow = document.querySelector('.login-window');
-const loginLinks = document.querySelectorAll('.popup-link');
-const loginClose = document.querySelector('.login-close');
+export function login() {
+    const loginWindow = document.querySelector('.login-window');
+    const loginLinks = document.querySelectorAll('.popup-link');
+    const closeLogBtns = document.querySelectorAll('.popup-close-btn');
 
-const signUpWindow = document.querySelector('.signup-window');
-const signUpLink = document.querySelector('.signup-link');
-const signUpClose = document.querySelector('.signup-close');
+    const loginMailBtn = document.querySelector('.login-window__email-reg');
+    const loginEnter = document.querySelector('.login-enter');
 
-const body = document.querySelector('body'); /* для блокировки скролла */
+    const signUpWindow = document.querySelector('.signup-window');
+    const signUpLinks = document.querySelectorAll('.signup-link');
 
-if (loginLinks.length > 0) {
-    for (let i = 0; i < loginLinks.length; i++) {
-        /* перебераем все ссылки на открытие */
-        const loginLink = loginLinks[i];
+    const signUpBtn = document.querySelector('.signup-window__email-reg');
+    const signUpEnter = document.querySelector('.signup-enter');
+
+    const newPasswordLink = document.querySelector('.help-password__link');
+    const newPasswordWindow = document.querySelector('.new-password');
+
+    const closeAllpopups = document.querySelectorAll('.click-close');
+
+    const body = document.querySelector('body'); /* для блокировки скролла */
+
+
+    /* открытие модалки login */
+    for (let loginLink of loginLinks) {
         loginLink.addEventListener("click", (e) => {
             loginWindow.style.display = 'flex';
             signUpWindow.style.display = 'none';
+            signUpEnter.style.display = 'none';
             body.style.overflow = 'hidden';
             e.preventDefault();
         });
     }
-}
 
-loginClose.addEventListener('click', () => {
-    loginWindow.style.display = 'none';
-    body.style.overflow = 'visible';
-});
+    /* открытие модалки login регистрации */
+    loginMailBtn.addEventListener('click', () => {
+        loginEnter.style.display = 'flex';
+    });
 
-signUpLink.addEventListener('click', (e) => {
-    signUpWindow.style.display = 'flex';
-    e.preventDefault();
-});
-
-signUpClose.addEventListener('click', () => {
-    signUpWindow.style.display = 'none';
-    loginWindow.style.display = 'none';
-    body.style.overflow = 'visible';
-});
-
-
-
-/* if (closeLinks.length > 0) {
-    for (let i = 0; i > closeLinks.length; i++) {
-        const closeLink = closeLinks[i];
-        closeLink.addEventListener('click', () => {
-            body.style.overflow = 'visible';
-            loginWindow.style.display = 'none';
-            signUpWindow.style.display = 'none';
+    /* открытие модалки signup */
+    for (let signUpLink of signUpLinks) {
+        signUpLink.addEventListener('click', (e) => {
+            signUpWindow.style.display = 'flex';
+            loginEnter.style.display = 'none';
+            e.preventDefault();
         });
     }
-} */
+
+    /* открытие модалки signup регистрации */
+    signUpBtn.addEventListener('click', () => {
+        signUpEnter.style.display = 'flex';
+    });
+
+
+    /* сброс пароля */
+    newPasswordLink.addEventListener('click', (e) => {
+        newPasswordWindow.style.display = 'flex';
+        loginWindow.style.display = 'none';
+        e.preventDefault();
+    });
+
+    /* закрытие всех модалок */
+    const closePopup = () => {
+        for (let closeAllpopup of closeAllpopups) {
+            closeAllpopup.style.display = 'none';
+            body.style.overflow = 'visible';
+        }
+    };
+
+    closeLogBtns.forEach((closeLogBtn) => {
+        closeLogBtn.addEventListener('click', () => {
+            closePopup();
+        });
+    });
+}
+
+login();

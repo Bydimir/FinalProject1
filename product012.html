@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <div class="coupon-wrapper">
+            <span class="coupon-info">Get 15% OFF - Use Coupon Code CIELO</span>
+        </div>
+
+        <div class="header-content">
+
+            <!-- ЛОГО ХЭДЕРА -->
+            <div class="logo">
+                <a class="logo-link__image" href="./home.html">
+                    <img class="logo-image" src="./img/Home/Logo.png" alt="">
+                </a>
+                <a class="logo-link__text" href="./home.html">
+                    <span class="logo-text">Cielo Apparel</span>
+                </a>
+            </div>
+
+            <!-- НАВИГАЦИЯ ХЭДЕРА -->
+            <div class="nav-section">
+
+                <ul class="navigations burger-toggle">
+                    <li class="nav-item">
+                        <a class="nav-link active-link" href="./home.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shop.html">SHOP</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">ABOUT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">CONTACT</a>
+                    </li>
+                </ul>
+
+                <!-- ОКНО ЛОГИН -->
+                <div class="login-section burger-toggle">
+                    <a class="login-link__image popup-link" href="#">
+                        <img src="./img/Home/Frame.svg" alt="" class="login-image">
+                    </a>
+
+                    <a class="login-link__text popup-link" href="#">Log In</a>
+                </div>
+
+                <!-- МОДАЛКА LOGIN -->
+                <div class="login-window click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="login-window__title">Log In</h1>
+                        <span class="login-window__subtitle">New to this site?
+                            <a class="login-window__link-modal signup-link link-color" href="#">Sign Up</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <button class="login-window__face-reg">Log in with Facebook</button>
+
+                        <button class="login-window__google-reg">Log in with Google</button>
+
+                        <div class="login-window__text-line">
+                            <div class="login-window__line-before"></div>
+                            <span class="login-window__text">or</span>
+                            <div class="login-window__line-after"></div>
+                        </div>
+
+                        <button class="login-window__email-reg">log in with email</button>
+
+                    </div>
+                </div>
+
+                <!-- МОДАЛКА ВВОДА ДАННЫХ ДЛЯ ЛОГИНА -->
+                <div class="login-enter click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="login-window__title">Log In</h1>
+                        <span class="login-window__subtitle">New to this site?
+                            <a class="login-window__link-modal signup-link link-color" href="#">Sign Up</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <form id="form-log" class="form-log">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+
+                            <div class="form-log__block">
+                                <label for="password" class="form-log__title">Password</label>
+                                <input id="user-password" type="password" class="form-log__input" id="password">
+                                <small class="error-text">Make sure you enter a password.</small>
+                            </div>
+                        </form>
+
+                        <div class="help-password">
+                            <a href="#" class="help-password__link"><u>Forgot password?</u></a>
+                        </div>
+
+                        <button class="login-enter__button">Log In</button>
+
+                        <div class="login-enter__text-line">
+                            <div class="login-enter__line-before"></div>
+                            <span class="login-enter__text">or log in with</span>
+                            <div class="login-enter__line-after"></div>
+                        </div>
+
+                        <div class="login-social">
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/face-logo.jpg" alt="">
+                            </div>
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/google-login.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- МОДАЛКА СБРОСА ПАРОЛЯ -->
+                <div class="new-password click-close">
+
+                    <div class="new-password__content">
+
+                        <h1 class="new-password__title">Create New Password</h1>
+                        <span class="new-password__subtitle">Please enter your email address</span>
+
+                        <form id="form-log-pass" class="form-log">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+                        </form>
+
+                        <button class="popup-close-btn"></button>
+
+                        <button class="login-enter__button">Create Password</button>
+
+                    </div>
+
+                </div>
+
+                <!-- МОДАЛКА РЕГИСТРАЦИИ ---------------------------------->
+                <div class="signup-window click-close">
+                    <div class="signup-window__content">
+                        <h1 class="signup-window__title">Sign Up</h1>
+                        <span class="signup-window__subtitle">Already a member?
+                            <a class="signup-window__link-modal popup-link link-color" href="">Log In</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <button class="signup-window__face-reg">Sign up with Facebook</button>
+
+                        <button class="signup-window__google-reg">Sign up with Google</button>
+
+                        <div class="signup-window__text-line">
+                            <div class="signup-window__line-before"></div>
+                            <span class="signup-window__text">or</span>
+                            <div class="signup-window__line-after"></div>
+                        </div>
+
+                        <button class="signup-window__email-reg">Sign up with email</button>
+
+                    </div>
+                </div>
+
+                <!-- МОДАЛКА РЕГИСТРАЦИИ ВВОДА ДАННЫХ --------------------->
+                <div class="signup-enter click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="signup-window__title">Sign Up</h1>
+                        <span class="signup-window__subtitle">Already a member?
+                            <a class="signup-window__link-modal popup-link link-color" href="">Log In</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <form id="form-sign" class="form-log form-sign">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+
+                            <div class="form-log__block">
+                                <label for="password" class="form-log__title">Password</label>
+                                <input type="password" class="form-log__input">
+                                <small class="error-text">Make sure you enter a password.</small>
+                            </div>
+                        </form>
+
+                        <button class="login-enter__button">Sign Up</button>
+
+                        <div class="login-enter__text-line">
+                            <div class="login-enter__line-before"></div>
+                            <span class="login-enter__text">or sign up with</span>
+                            <div class="login-enter__line-after"></div>
+                        </div>
+
+                        <div class="login-social">
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/face-logo.jpg" alt="">
+                            </div>
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/google-login.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- КОРЗИНА -->
+                <div class="basket-section">
+                    <a class="basket-link" href="#">
+                        <img class="basket-img" src="./img/Home/basket.png" alt="">
+                    </a>
+
+                    <div class="bascet-num">0</div>
+                </div>
+
+                <!-- МОДАЛКА КОРЗИНЫ -->
+                <div class="basket-container active-basket">
+                    <div class="basket-active active-basket">
+                        <div class="basket-active__header">
+                            <button class="basket-active__header-close basket-close"></button>
+                            <span class="basket-active__header-title">Cart</span>
+                        </div>
+                        <div class="basket-active__main">
+                            <span class="basket-active__main-title">Cart is empty</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- БУРГЕР -->
+                <div class="burger burger-toggle">
+                    <span class="burger__btn"></span>
+                </div>
+
+            </div> <!-- nav-section -->
+
+        </div>
+    </header>
+
+    <div class="main-card">
+
+        <div class="main-card__container">
+
+            <div class="main-card__content">
+
+                <div class="main-card__content-nav">
+
+                    <div class="main-card__shop-link">
+                        <a href="./shop.html" class="nav-links link-shop">Back to Shop</a>
+                    </div>
+
+                    <div class="main-card__content-nav-path">
+                        <a href="./home.html" class="nav-links home-link">Home</a>
+                        /
+                        <a href="./shop.html" class="nav-links shop-link">Shop</a>
+                        /
+                        <a href="#" class="nav-links product-link">I'm a Product</a>
+                    </div>
+
+                    <div class="main-card__content-nav-step">
+                        <a href="./product011.html" class="nav-links step-back-active">Prev</a>
+                        |
+                        <a href="./product013.html" class="nav-links step-next">Next</a>
+                    </div>
+
+                </div> <!-- content-nav -->
+
+                <div class="main-card__content-block">
+
+                    <div class="main-card__content-img-block">
+
+                        <div class="card-image product-012"></div>
+                        <p class="product-description">I'm a product description. I'm a great place to add more details
+                            about your product such as sizing, material, care instructions and cleaning instructions.
+                        </p>
+
+                        <!-- Увеличение картинки-------------------- -->
+                        <div class="enlargement-picture">
+                            <button class="close-picture"></button>
+                            <div class="card-image product-012 popup-image"></div>
+                            <div class="zoom-image zoom-2">
+                                <img class="zoom-image__item" src="./img/Shop/12-12.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="main-card__content-info-block">
+
+                        <span class="info-block__title">I'm a Product</span>
+                        <span class="info-block__sku">SKU: 0012</span>
+                        <span class="info-block__price">12,00₴</span>
+
+                        <div class="size-select">
+                            <span class="size-select__title">Size</span>
+                            <div class="size-select__header">
+                                <span class="size-select__current">Select</span>
+                            </div>
+
+                            <div class="size-select__body">
+                                <div class="size-select__item">Small</div>
+                                <div class="size-select__item">Medium</div>
+                                <div class="size-select__item">Large</div>
+                            </div>
+                        </div>
+
+                        <div class="quantity">
+                            <span class="quantity-title">Quantity</span>
+
+                            <input type="number" class="quantity-number" value="1" max="99999" min="1">
+
+                        </div>
+
+                        <button class="add-button">Add To Cart</button>
+
+                        <p class="product-description des-mobile">I'm a product description. I'm a great place to
+                            add
+                            more details
+                            about your product such as sizing, material, care instructions and cleaning
+                            instructions.
+                        </p>
+
+                        <div class="accordion-wrapper">
+                            <div class="accordion-item">
+                                <span class="accordion-item__title">Product Info
+                                </span>
+                                <p class="accordion-item__content">I'm a product detail. I'm a great place to add
+                                    more
+                                    information about your product such as sizing, material, care and cleaning
+                                    instructions. This is also a great space to write what makes this product
+                                    special
+                                    and how your customers can benefit from this item.</p>
+                            </div>
+
+                            <div class="accordion-item">
+                                <span class="accordion-item__title">Return & Refund Policy
+
+                                </span>
+                                <p class="accordion-item__content">I’m a Return and Refund policy. I’m a great place
+                                    to
+                                    let your customers know what to do in case they are dissatisfied with their
+                                    purchase. Having a straightforward refund or exchange policy is a great way to
+                                    build
+                                    trust and reassure your customers that they can buy with confidence.</p>
+                            </div>
+
+                            <div class="accordion-item last-item">
+                                <span class="accordion-item__title">Product Info
+                                </span>
+                                <p class="accordion-item__content">I'm a shipping policy. I'm a great place to add
+                                    more
+                                    information about your shipping methods, packaging and cost. Providing
+                                    straightforward information about your shipping policy is a great way to build
+                                    trust
+                                    and reassure your customers that they can buy from you with confidence.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div> <!-- content -->
+
+        </div> <!-- containe -->
+
+    </div> <!-- main-card -->
+
+    <footer class="main-footer">
+
+        <div class="footer-columns">
+
+            <ul class="footer-columns__navigation">
+                <li class="footer-columns__navigation-title">Cielo Apparel</li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="./home.html" class="footer-columns__navigation-link">Home</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="./shop.html" class="footer-columns__navigation-link">Shop</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="./about.html" class="footer-columns__navigation-link">About</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Forum</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="./contact.html" class="footer-columns__navigation-link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="footer-columns__navigation">
+                <li class="footer-columns__navigation-title">Explore</li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">FAQ</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Shipping & Returns</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Store Policy</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Payment Methods</a>
+                </li>
+
+            </ul>
+
+            <div class="form-section">
+
+                <ul class="footer-columns__navigation">
+                    <li class="footer-columns__navigation-title">Join our Newsletter</li>
+                </ul>
+
+                <div class="footer-form">
+                    <form action="#" id="form" class="email-form">
+
+                        <div class="email-item">
+
+                            <input id="formEmail" type="text" placeholder="Enter your mail here*" name="email"
+                                class="form-input">
+                        </div>
+
+                        <button type="submit" class="form-button">Subscribe Now</button>
+                    </form>
+                </div>
+
+            </div> <!-- form-section -->
+
+            <ul class="footer-columns__navigation">
+                <li class="footer-columns__navigation-title">Follow Us</li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Facebook</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Twitter</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Instagram</a>
+                </li>
+
+                <li class="footer-columns__navigation-item">
+                    <a href="" class="footer-columns__navigation-link">Pinterest</a>
+                </li>
+
+            </ul>
+
+        </div> <!-- footer-columns -->
+
+        <div class="created">
+            <span class="created__text">© 2023 by Cielo Apparel. Proudly created with
+                <a href="https://ru.wix.com/" target="_blank">Wix.com</a>
+            </span>
+        </div>
+
+    </footer>
+
+    <div class="scroll-up">
+        <div class="scroll-up__img"></div>
+    </div>
+
+    <script type="module" src="./main-js/script.js"></script>
+    <script src="./main-js/popup-image.js"></script>
+
+</body>
+
+</html>

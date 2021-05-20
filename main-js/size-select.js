@@ -1,4 +1,4 @@
-let select = function () {
+export function select() {
 
     let selectHeader = document.querySelectorAll('.size-select__header');
     let selectItem = document.querySelectorAll('.size-select__item');
@@ -13,7 +13,7 @@ let select = function () {
     });
 
     function selectToggle() {
-        this.parentElement.classList.toggle('is-active'); /* нормально ли в таком случае использовать this? */
+        this.parentElement.classList.toggle('is-active');
     }
 
     function selectChoose() {
@@ -24,6 +24,13 @@ let select = function () {
         select.classList.remove('is-active');
     }
 
-};
+
+    /*   window.addEventListener('click', (e) => {
+          if (e.target == select) {
+              select.classList.remove('is-active');
+          }
+      }); */
+
+}
 
 select();

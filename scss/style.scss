@@ -57,6 +57,10 @@
 .logo {
     @include flex-center;
     padding-right: 5px;
+
+    @include mobile {
+        width: 157px;
+    }
 }
 
 .logo-link__image {
@@ -154,7 +158,7 @@
 }
 
 .active-link {
-    color: red;
+    color: rgb(177, 54, 54);
 }
 
 /* LOGIN ЛОГО И КАРТИНКА */
@@ -202,7 +206,7 @@
 
     @include mobile {
         padding-right: 30px;
-        margin-right: 60px;
+        margin-right: 10px;
     }
 }
 
@@ -728,9 +732,10 @@
         background-color: rgba(255, 255, 255, 0.5);
         padding: 10px;
         border: none;
-        background-image: url(../img/Home/next.png);
+        border-radius: 5px;
         background-position: center;
-        background-size: cover;
+        background-size: 25px;
+        background-repeat: no-repeat;
         display: none;
 
         @include mobile {
@@ -742,12 +747,16 @@
         position: absolute;
         top: 40%;
         left: 20px;
+        padding: 5px;
+        background-image: url(../img/Home/left-arrow.png);
     }
 
     &__next {
         position: absolute;
         top: 40%;
         right: 20px;
+        background-image: url(../img/Home/next.png);
+
     }
 
     @include mobile {
@@ -1005,7 +1014,8 @@
         opacity: 0;
         visibility: hidden;
         background-color: grey;
-        padding: 5px 0 0 5px;
+        padding: 5px 0 0 3px;
+        border: 2px solid white;
         border-radius: 3px;
         transition: .2s;
         transform: translateY(25px);
@@ -1015,7 +1025,8 @@
         width: 50px;
         height: 50px;
         background-image: url(../img/Home/upload.png);
-        background-size: cover;
+        background-size: 25px;
+        background-repeat: no-repeat;
         background-position: center;
         filter: invert(100%);
     }

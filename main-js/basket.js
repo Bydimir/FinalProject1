@@ -1,28 +1,40 @@
-const openBasket = document.querySelector('.basket-link');
-const containerBasket = document.querySelector('.basket-container');
-const basketWindow = document.querySelector('.basket-active');
-const closeBasket = document.querySelector('.basket-close');
+export function basket() {
+    const openBasket = document.querySelector('.basket-link');
+    const containerBasket = document.querySelector('.basket-container');
+    const closeBasket = document.querySelector('.basket-close');
+    const basketBlocks = document.querySelectorAll('.active-basket');
 
-const activeBasket = document.querySelector('.active-basket');
 
-openBasket.addEventListener('click', (e) => {
-    containerBasket.classList.add('basket-open');
-    basketWindow.classList.add('basket-open');
-    e.preventDefault();
+    const closeAll = () => {
+        basketBlocks.forEach((basketBlock) => {
+            basketBlock.classList.remove('basket-open');
+        });
+    };
 
-    // activeBasket.classList.add('basket-open');
-});
+    const openAll = () => {
+        basketBlocks.forEach((basketBlock) => {
+            basketBlock.classList.add('basket-open');
+        });
+    };
 
-closeBasket.addEventListener('click', (e) => {
-    containerBasket.classList.remove('basket-open');
-    basketWindow.classList.remove('basket-open');
-    e.preventDefault();
+    //обработчик открытия корзины
+    openBasket.addEventListener('click', (e) => {
+        openAll();
+        e.preventDefault();
+    });
 
-});
+    //обработчик закрытия корзины
+    closeBasket.addEventListener('click', (e) => {
+        closeAll();
+        e.preventDefault();
+    });
 
-window.addEventListener('click', (e) => {
-    if (e.target == containerBasket) {
-        containerBasket.classList.remove('basket-open');
-        basketWindow.classList.remove('basket-open');
-    }
-});
+    //закрытие при нажатии на серую область
+    window.addEventListener('click', (e) => {
+        if (e.target == containerBasket) {
+            closeAll();
+        }
+    });
+}
+
+basket();

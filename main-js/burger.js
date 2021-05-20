@@ -1,13 +1,12 @@
-const burgerButton = document.querySelector('.burger');
-const burgerMenu = document.querySelector('.navigations');
-const burgerLogin = document.querySelector('.login-section');
-/* let openedWimdows = burgerMenu,
-    burgerLogin; */
+export function burger() {
+    const burgerButton = document.querySelector('.burger');
+    const burgerBlocks = document.querySelectorAll('.burger-toggle');
 
-const bodyLock = document.querySelector('body'); /* для блокировки скролла */
+    burgerButton.addEventListener('click', () => {
+        for (let burgerBlock of burgerBlocks) {
+            burgerBlock.classList.toggle('burger-open');
+        }
+    });
+}
 
-burgerButton.addEventListener('click', () => {
-    burgerMenu.classList.toggle('burger-open');
-    burgerButton.classList.toggle('burger-open');
-    burgerLogin.classList.toggle('burger-open');
-});
+burger();

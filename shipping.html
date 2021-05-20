@@ -19,36 +19,39 @@
 
         <div class="header-content">
 
+            <!-- ЛОГО ХЭДЕРА -->
             <div class="logo">
-                <a class="logo-link__image" href="">
+                <a class="logo-link__image" href="./home.html">
                     <img class="logo-image" src="./img/Home/Logo.png" alt="">
                 </a>
-                <a class="logo-link__text" href="">
+                <a class="logo-link__text" href="./home.html">
                     <span class="logo-text">Cielo Apparel</span>
                 </a>
-            </div> <!-- header-content -->
+            </div>
 
+            <!-- НАВИГАЦИЯ ХЭДЕРА -->
             <div class="nav-section">
 
-                <ul class="navigations">
+                <ul class="navigations burger-toggle">
                     <li class="nav-item">
-                        <a class="nav-link" href="">HOME</a>
+                        <a class="nav-link active-link" href="./home.html">HOME</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">SHOP</a>
+                        <a class="nav-link" href="./shop.html">SHOP</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">ABOUT</a>
+                        <a class="nav-link" href="./about.html">ABOUT</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">CONTACT</a>
+                        <a class="nav-link" href="./contact.html">CONTACT</a>
                     </li>
                 </ul>
 
-                <div class="login-section">
+                <!-- ОКНО ЛОГИН -->
+                <div class="login-section burger-toggle">
                     <a class="login-link__image popup-link" href="#">
                         <img src="./img/Home/Frame.svg" alt="" class="login-image">
                     </a>
@@ -57,14 +60,15 @@
                 </div>
 
                 <!-- МОДАЛКА LOGIN -->
-                <div class="login-window">
+                <div class="login-window click-close">
                     <div class="login-window__content">
+
                         <h1 class="login-window__title">Log In</h1>
                         <span class="login-window__subtitle">New to this site?
-                            <a class="login-window__link-modal signup-link" href="#">Sign Up</a>
+                            <a class="login-window__link-modal signup-link link-color" href="#">Sign Up</a>
                         </span>
 
-                        <button class="login-close"></button>
+                        <button class="popup-close-btn"></button>
 
                         <button class="login-window__face-reg">Log in with Facebook</button>
 
@@ -81,14 +85,88 @@
                     </div>
                 </div>
 
-                <div class="signup-window">
+                <!-- МОДАЛКА ВВОДА ДАННЫХ ДЛЯ ЛОГИНА -->
+                <div class="login-enter click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="login-window__title">Log In</h1>
+                        <span class="login-window__subtitle">New to this site?
+                            <a class="login-window__link-modal signup-link link-color" href="#">Sign Up</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <form id="form-log" class="form-log">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+
+                            <div class="form-log__block">
+                                <label for="password" class="form-log__title">Password</label>
+                                <input id="user-password" type="password" class="form-log__input" id="password">
+                                <small class="error-text">Make sure you enter a password.</small>
+                            </div>
+                        </form>
+
+                        <div class="help-password">
+                            <a href="#" class="help-password__link"><u>Forgot password?</u></a>
+                        </div>
+
+                        <button class="login-enter__button">Log In</button>
+
+                        <div class="login-enter__text-line">
+                            <div class="login-enter__line-before"></div>
+                            <span class="login-enter__text">or log in with</span>
+                            <div class="login-enter__line-after"></div>
+                        </div>
+
+                        <div class="login-social">
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/face-logo.jpg" alt="">
+                            </div>
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/google-login.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- МОДАЛКА СБРОСА ПАРОЛЯ -->
+                <div class="new-password click-close">
+
+                    <div class="new-password__content">
+
+                        <h1 class="new-password__title">Create New Password</h1>
+                        <span class="new-password__subtitle">Please enter your email address</span>
+
+                        <form id="form-log-pass" class="form-log">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+                        </form>
+
+                        <button class="popup-close-btn"></button>
+
+                        <button class="login-enter__button">Create Password</button>
+
+                    </div>
+
+                </div>
+
+                <!-- МОДАЛКА РЕГИСТРАЦИИ ---------------------------------->
+                <div class="signup-window click-close">
                     <div class="signup-window__content">
                         <h1 class="signup-window__title">Sign Up</h1>
                         <span class="signup-window__subtitle">Already a member?
-                            <a class="signup-window__link-modal popup-link" href="">Log In</a>
+                            <a class="signup-window__link-modal popup-link link-color" href="">Log In</a>
                         </span>
 
-                        <button class="signup-close"></button>
+                        <button class="popup-close-btn"></button>
 
                         <button class="signup-window__face-reg">Sign up with Facebook</button>
 
@@ -105,30 +183,81 @@
                     </div>
                 </div>
 
+                <!-- МОДАЛКА РЕГИСТРАЦИИ ВВОДА ДАННЫХ --------------------->
+                <div class="signup-enter click-close">
+                    <div class="login-window__content">
+
+                        <h1 class="signup-window__title">Sign Up</h1>
+                        <span class="signup-window__subtitle">Already a member?
+                            <a class="signup-window__link-modal popup-link link-color" href="">Log In</a>
+                        </span>
+
+                        <button class="popup-close-btn"></button>
+
+                        <form id="form-sign" class="form-log form-sign">
+                            <div class="form-log__block">
+                                <label for="email" class="form-log__title">Email</label>
+                                <input type="email" class="form-log__input">
+                                <small class="error-text">Email cannot be blank</small>
+                            </div>
+
+                            <div class="form-log__block">
+                                <label for="password" class="form-log__title">Password</label>
+                                <input type="password" class="form-log__input">
+                                <small class="error-text">Make sure you enter a password.</small>
+                            </div>
+                        </form>
+
+                        <button class="login-enter__button">Sign Up</button>
+
+                        <div class="login-enter__text-line">
+                            <div class="login-enter__line-before"></div>
+                            <span class="login-enter__text">or sign up with</span>
+                            <div class="login-enter__line-after"></div>
+                        </div>
+
+                        <div class="login-social">
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/face-logo.jpg" alt="">
+                            </div>
+                            <div href="#" class="login-social__icons">
+                                <img class="login-social__icons-img" src="./img/home/google-login.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
                 <!-- КОРЗИНА -->
                 <div class="basket-section">
-                    <a class="basket-link" href="">
+                    <a class="basket-link" href="#">
                         <img class="basket-img" src="./img/Home/basket.png" alt="">
                     </a>
 
                     <div class="bascet-num">0</div>
                 </div>
 
-                <!-- МОДАЛКА КОРЗИНА -->
-                <div class="basket-active">
-                    <div class="basket-active__header">
-                        <button class="basket-active__header-close basket-close"></button>
-                        <span class="basket-active__header-title">Cart</span>
+                <!-- МОДАЛКА КОРЗИНЫ -->
+                <div class="basket-container active-basket">
+                    <div class="basket-active active-basket">
+                        <div class="basket-active__header">
+                            <button class="basket-active__header-close basket-close"></button>
+                            <span class="basket-active__header-title">Cart</span>
+                        </div>
+                        <div class="basket-active__main">
+                            <span class="basket-active__main-title">Cart is empty</span>
+                        </div>
                     </div>
-                    <div class="basket-active__main">
-                        <span class="basket-active__main-title">Cart is empty</span>
-                    </div>
+                </div>
+
+                <!-- БУРГЕР -->
+                <div class="burger burger-toggle">
+                    <span class="burger__btn"></span>
                 </div>
 
             </div> <!-- nav-section -->
 
         </div>
-
     </header>
 
     <div class="main-shipping">
@@ -266,8 +395,8 @@
 
     </footer>
 
-    <script type="module" src="./script.js"></script>
-    <script type="module" src="./login.js"></script>
+    <script type="module" src="./main-js/script.js">
+    </script>
 </body>
 
 </html>
