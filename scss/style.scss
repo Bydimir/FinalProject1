@@ -1,7 +1,6 @@
 @import 'reset';
 @import './mixins.scss';
 @import './login-modal.scss';
-//@import './basket-modal.scss';
 @import 'shop.scss';
 @import 'about.scss';
 @import 'contact.scss';
@@ -161,7 +160,7 @@
     color: rgb(177, 54, 54);
 }
 
-/* LOGIN ЛОГО И КАРТИНКА */
+/* LOGIN ЛОГО И КАРТИНКА -----------------------------*/
 .login-section {
     @include flex-center;
     margin-right: 35px;
@@ -242,7 +241,6 @@
     opacity: 0;
     visibility: hidden;
     z-index: 6;
-
 }
 
 .basket-active {
@@ -371,7 +369,7 @@
     transform: scale(0);
 }
 
-/* INTRO БЛОК */
+/* INTRO БЛОК ----------------------------------------*/
 .main-content {
     width: 100%;
     margin-top: 130px;
@@ -492,7 +490,7 @@
     }
 }
 
-/* GUID BLOCK */
+/* GUID BLOCK -----------------------------------------------*/
 .guid-block {
     width: 100%;
     display: flex;
@@ -553,7 +551,7 @@
 }
 
 /*
-НОВЫЕ ПОСТУПЛЕНИЯ / КАРТОЧКИ */
+НОВЫЕ ПОСТУПЛЕНИЯ / КАРТОЧКИ ---------------------------------*/
 .new-arrival__header {
     width: 100%;
     height: 213px;

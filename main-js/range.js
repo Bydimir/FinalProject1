@@ -24,6 +24,4 @@ export function range() {
         valueNumbers[handle].value = Math.round(values[handle]);
     });
 }
-
-
 range();

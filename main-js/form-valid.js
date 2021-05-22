@@ -6,12 +6,6 @@ export function formValid() {
     const loginButton = document.querySelector('.login-enter__button');
     const errorText = document.querySelector('.error-text');
 
-    /* for (let loginButton of loginButtons) {
-        loginButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            checkInputs();
-        });
-    } */
 
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();

@@ -4,7 +4,7 @@ export function scrollUpp() {
     const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
     //click
-    scrollUp.addEventListener('click', () => {
+    scrollUp.addEventListener('click', (е) => {
         window.scrollTo({
             top: 0,
         });

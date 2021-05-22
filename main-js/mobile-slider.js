@@ -43,33 +43,6 @@ function mobileSlider() {
     function rollSlider() {
         sliderLine.style.transform = 'translate(-' + count * width + 'px)';
     }
-
-
-    /* Перелистывание картинки тач */
-
-    /* if (imagesSlider.length > 0) {
-        for (let i = 0; i > imagesSlider.length; i++) {
-            const imageSlider = imagesSlider[i];
-
-            imageSlider.addEventListener('touchstart', handleTouchStart, false);
-            imageSlider.addEventListener('touchmove', handleTouchMove, false);
-        }
-    }
-
-    let x1 = null;
-    let y1 = null;
-
-    function handleTouchStart(e) {
-        const firstTouch = e.touches[0];
-        x1 = firstTouch.clientX;
-        y1 = firstTouch.clientY;
-        console.log(x1, y1);
-    }
-
-    // function handleTouchStart(e) {
-
-
-    // } */
 }
 
 mobileSlider();
